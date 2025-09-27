@@ -1,0 +1,122 @@
+{
+  "normalizers": {
+    "cpuSingle": 3500,
+    "cpuMulti": 12000,
+    "gpu1080": 45,
+    "gpu1440": 60,
+    "ramGb": 32,
+    "ioProxy": 350,
+    "ioNative": 2000,
+    "networkMbps": 1000,
+    "memoryGbps": 40
+  },
+  "tiers": [
+    {
+      "id": "basica",
+      "label": "Básica",
+      "minScores": {
+        "cpu": 1.0,
+        "ramGb": 32,
+        "gpu": 1.0,
+        "io": 1.0,
+        "net": 0.8
+      },
+      "description": "Modelos ligeros, interiorismo y reformas puntuales sin grandes nubes de puntos.",
+      "recommendedProjects": "Pequeño"
+    },
+    {
+      "id": "equilibrada",
+      "label": "Equilibrada",
+      "minScores": {
+        "cpu": 1.2,
+        "ramGb": 64,
+        "gpu": 1.3,
+        "io": 1.3,
+        "net": 1.0
+      },
+      "description": "Proyectos residenciales u oficinas con vínculos moderados y nubes ligeras.",
+      "recommendedProjects": "Medio"
+    },
+    {
+      "id": "avanzada",
+      "label": "Avanzada",
+      "minScores": {
+        "cpu": 1.4,
+        "ramGb": 96,
+        "gpu": 1.6,
+        "io": 1.6,
+        "net": 1.3
+      },
+      "description": "Equipamientos complejos, nubes pesadas y experiencias VR puntuales.",
+      "recommendedProjects": "Grande"
+    }
+  ],
+  "projectSizing": [
+    {
+      "size": "Pequeño",
+      "description": "Archivos RVT 0-300 MB sin vínculos externos.",
+      "requirements": {
+        "minRamGb": 32,
+        "minCpuScore": 1.0,
+        "minIoScore": 1.0
+      }
+    },
+    {
+      "size": "Medio",
+      "description": "300-900 MB, hasta 3 vínculos y algunas nubes de puntos.",
+      "requirements": {
+        "minRamGb": 64,
+        "minCpuScore": 1.2,
+        "minIoScore": 1.3
+      }
+    },
+    {
+      "size": "Grande",
+      "description": "900 MB-1.8 GB, más de 3 vínculos y nubes pesadas.",
+      "requirements": {
+        "minRamGb": 96,
+        "minCpuScore": 1.4,
+        "minIoScore": 1.6
+      }
+    }
+  ],
+  "demoProfiles": {
+    "portatil": {
+      "nombre": "Portátil creativo 2022",
+      "metrics": {
+        "cpuSingle": 3200,
+        "cpuMulti": 9500,
+        "gpu1080": 42,
+        "gpu1440": 28,
+        "ramGb": 32,
+        "ioProxy": 280,
+        "networkMbps": 300
+      }
+    },
+    "workstation": {
+      "nombre": "Workstation BIM 2024",
+      "metrics": {
+        "cpuSingle": 4200,
+        "cpuMulti": 18000,
+        "gpu1080": 75,
+        "gpu1440": 62,
+        "ramGb": 128,
+        "ioProxy": 650,
+        "ioNative": 4500,
+        "networkMbps": 1800
+      }
+    },
+    "oficina": {
+      "nombre": "Sobremesa de oficina",
+      "metrics": {
+        "cpuSingle": 2800,
+        "cpuMulti": 7000,
+        "gpu1080": 30,
+        "gpu1440": 18,
+        "ramGb": 24,
+        "ioProxy": 200,
+        "networkMbps": 120
+      }
+    }
+  }
+}

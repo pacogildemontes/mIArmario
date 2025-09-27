@@ -1,0 +1,6 @@
+{
+  "name": "Escena PBR ligera",
+  "triangles": 250000,
+  "lights": 4,
+  "notes": "Se usa como referencia para las pruebas WebGL sin descargar recursos reales."
+}

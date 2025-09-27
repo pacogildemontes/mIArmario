@@ -1,0 +1,5 @@
+Consulta la carpeta native-agent para ejecutar el script Python:
+
+1. Instala dependencias opcionales: pip install psutil
+2. Ejecuta: python agent.py --output resultados.json
+3. Importa el JSON desde la pantalla de resultados (botón "Integrar JSON del agente").
